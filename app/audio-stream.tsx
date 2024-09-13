@@ -7,7 +7,7 @@ const AudioComponent: React.FC = () => {
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
 
   useEffect(() => {
-    websocketRef.current = new WebSocket('ws://192.168.0.106:8080/call/connection');
+    websocketRef.current = new WebSocket('ws://localhost:8080/call/connection');
 
     websocketRef.current.onopen = () => {
       console.log('WebSocket connected');
